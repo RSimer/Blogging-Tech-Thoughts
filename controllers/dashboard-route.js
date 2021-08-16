@@ -10,7 +10,7 @@ router.get('/', withAuth, async (req, res) => {
         },
         attributes: [
             'id',
-            'post_body',
+            'post',
             'title',
             'created_at'
         ],
@@ -46,7 +46,7 @@ router.get('/edit/:id', withAuth, async (req, res) => {
         },
         attributes: [
             'id',
-            'post_body',
+            'post',
             'title',
             'created_at'
         ],
@@ -78,3 +78,5 @@ router.get('/createPost', withAuth, (req, res) => {
     res.render('create-post');
 })
 });
+
+module.exports = router;

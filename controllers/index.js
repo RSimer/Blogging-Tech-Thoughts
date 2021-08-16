@@ -4,4 +4,6 @@ const homeRoute = require('./home-routes');
 const dashboardRoute = require('./dashboard-route');
 
 router.use('/', homeRoute);
-router.use('/',dashboardRoute);
+router.use('/dashboard', dashboardRoute);
+
+module.exports = router;
