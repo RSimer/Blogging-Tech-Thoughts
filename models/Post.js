@@ -15,7 +15,7 @@ Post.init({
         type: DataTypes.STRING,
         allowNull: false,
     },
-    postURL:{
+    post:{
         type: DataTypes.STRING,
         
     },
@@ -24,6 +24,13 @@ Post.init({
         allowNull: false,
         defaultValue: DataTypes.NOW,
     },
+    user_id: {
+        type: DataTypes.INTEGER,
+        references:{
+            model: 'user',
+            key: 'id',
+        },
+    }
 },
 {
     sequelize,
